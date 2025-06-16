@@ -48,7 +48,7 @@ public class SwipeManager : MonoBehaviour
             else
                 swipeDelta = (Vector2)Input.mousePosition - startTouch;
 
-            if (swipeDelta.magnitude > 30)
+            if (swipeDelta.magnitude > 50)
             {
                 if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
                 {

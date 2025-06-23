@@ -6,20 +6,40 @@
             "id": "f34e5d2f-84d9-4796-a53b-3571de61e219",
             "actions": [
                 {
-                    "name": "Swipe",
-                    "type": "Value",
-                    "id": "cf37a6e4-b32f-419c-a7f0-94463b733a96",
+                    "name": "Tap",
+                    "type": "Button",
+                    "id": "5940a38f-e3d5-4f7a-936e-53b463178fe1",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Swipe",
+                    "type": "Button",
+                    "id": "e1ab106c-1811-469d-a11b-e8a7a39a1b84",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "76d755ea-b94d-48ec-9db7-f9247ef48699",
-                    "path": "<Pointer>/delta",
+                    "id": "53644fa7-e14e-486b-9de7-4e0ab11e6c26",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f19a73cb-4ef5-40c4-9525-a26ac68ccecc",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

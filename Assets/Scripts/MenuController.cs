@@ -1,16 +1,23 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void OnStartTap() 
     {
-        
+        SceneManager.LoadScene("BalloonRush");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDeathTap() 
     {
-        
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void OnExitTap() 
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif 
+        Application.Quit();
     }
 }

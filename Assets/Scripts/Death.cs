@@ -10,6 +10,13 @@ public class Death : MonoBehaviour
 
     private bool deathHandled = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         isDead = false;
@@ -23,6 +30,7 @@ public class Death : MonoBehaviour
             Debug.Log("Touched by Hazard");
             isDead = true;
         }
+        audioManager.PlaySFX(audioManager.pop);
     }
 
     private void Update()

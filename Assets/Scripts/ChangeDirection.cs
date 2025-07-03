@@ -16,6 +16,13 @@ public class ChangeDirection : MonoBehaviour
 
     public float moveSpeed;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         mover = GetComponent<Transform>();
@@ -41,6 +48,8 @@ public class ChangeDirection : MonoBehaviour
     private void ProcessTap()
     {
         Jump();
+
+        audioManager.PlaySFX(audioManager.inflate);
     }
 
     private void ProcessSwipe(string direction)
@@ -54,6 +63,7 @@ public class ChangeDirection : MonoBehaviour
                 transform.position += new Vector3(-swipeDistance, 0, 0);
                 break;
         }
+        audioManager.PlaySFX(audioManager.swipe);
     }
 
     private void Jump()
@@ -71,5 +81,6 @@ public class ChangeDirection : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         balloonRB.linearVelocity = Vector3.zero;
         isJumping = false;
+        audioManager.PlaySFX(audioManager.deflate);
     }
 }

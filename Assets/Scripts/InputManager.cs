@@ -13,14 +13,14 @@ public class InputManager : MonoBehaviour
 
     public delegate void OnSwipeHandler(string direction);
     public static event OnSwipeHandler OnSwipe;
-    public void Tap(InputAction.CallbackContext tap) 
+    public void Tap(InputAction.CallbackContext tap)
     {
         if (tap.started == true)
         {
             //Debug.Log("Tap has started");
             tapStartPosition = GetTapPosition();
         }
-        else if (tap.canceled == true) 
+        else if (tap.canceled == true)
         {
             //Debug.Log("Tap has finished");
             tapEndPosition = GetTapPosition();
@@ -29,35 +29,35 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    private Vector3 GetTapPosition() 
+    private Vector3 GetTapPosition()
     {
         Vector3 pointerPosition = Pointer.current.position.ReadValue();
 
         return pointerPosition;
     }
 
-    private void CheckForSwipe() 
+    private void CheckForSwipe()
     {
         Vector3 tapStartWorldPosition = tapStartPosition;
         tapStartWorldPosition.z = 1f;
         tapStartWorldPosition = Camera.main.ScreenToWorldPoint(tapStartWorldPosition);
 
         Vector3 tapEndWorldPosition = tapEndPosition;
-        tapEndWorldPosition.z = 1f; 
+        tapEndWorldPosition.z = 1f;
         tapEndWorldPosition = Camera.main.ScreenToWorldPoint(tapEndWorldPosition);
 
         float distanceSwiped = Vector3.Distance(tapStartWorldPosition, tapEndWorldPosition);
 
-        if (distanceSwiped >= swipeThreshold) 
+        if (distanceSwiped >= swipeThreshold)
         {
             string direction = "";
 
             float horizontalSwipe = tapEndPosition.x - tapStartPosition.x;
             float verticalSwipe = tapEndPosition.y - tapStartPosition.y;
 
-            if (Mathf.Abs(horizontalSwipe) > Mathf.Abs(verticalSwipe)) 
+            if (Mathf.Abs(horizontalSwipe) > Mathf.Abs(verticalSwipe))
             {
-                if (horizontalSwipe > 0) 
+                if (horizontalSwipe > 0)
                 {
                     direction = "right";
                 }
@@ -72,3 +72,5 @@ public class InputManager : MonoBehaviour
         }
     }
 }
+
+

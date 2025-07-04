@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8126445157566672679}
   m_Layer: 0
   m_Name: drone-background-design 1_0
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,4 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: -1, z: 0}
-  moveSpeed: 3
+  moveSpeed: 2
+  hazardType: 2

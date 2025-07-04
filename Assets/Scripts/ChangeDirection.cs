@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class ChangeDirection : MonoBehaviour
 {
     [SerializeField] private float swipeDistance = 2f;
+   
 
     private Transform mover;
     [SerializeField]
@@ -48,7 +49,7 @@ public class ChangeDirection : MonoBehaviour
     private void ProcessTap()
     {
         Jump();
-
+        
         audioManager.PlaySFX(audioManager.inflate);
     }
 

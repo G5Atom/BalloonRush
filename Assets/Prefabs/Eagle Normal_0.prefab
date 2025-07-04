@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8894597114533427507}
   m_Layer: 0
   m_Name: Eagle Normal_0
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3770968622880793076, guid: 19542905a3333f54e975640caa512816, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72265bf22c82ba40ac58a61f9859bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: -1, y: 0, z: 0}
-  moveSpeed: 8
+  moveDirection: {x: 1, y: 0, z: 0}
+  moveSpeed: 4
 --- !u!61 &-8894597114533427507
 BoxCollider2D:
   m_ObjectHideFlags: 0
